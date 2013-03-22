@@ -1,0 +1,23 @@
+{
+  "name": "midi-file-parser",
+  "version": "1.0.0",
+  "description": "npm port of jasmid, a midi file parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NHQ/midi-file-parser.git"
+  },
+  "keywords": [
+    "midi",
+    "midi",
+    "files",
+    ".mid",
+    "file"
+  ],
+  "author": "gasman",
+  "license": "see license",
+  "readmeFilename": "README.js"
+}
