@@ -15,6 +15,10 @@ var file = require('fs').readFileSync('rachnananov.mid', 'binary')
 
 var midi = midiFileParser(file);
 ```
+
+It returns an object with header and track info.
+
+
 You can use it with [browserify](https://github.com/substack/browserify) and [brfs](https://github.com/substack/brfs):
 ```js
 var midiFileParser = require('midi-file-parser');
