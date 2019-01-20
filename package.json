@@ -1,14 +1,10 @@
 {
-	"name": "midi-file-writer",
+	"name": "midi-file-io",
 	"version": "1.0.0",
-	"description": "port of midi-file-parser. a midi write version",
+	"description": "npm port of NHQ's midi-file-reader. support both read and write",
 	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:NHQ/midi-file-parser.git"
+	"devDependencies": {
+		"mocha": "5.2.0"
 	},
 	"keywords": [
 		"midi",
@@ -17,6 +13,13 @@
 		".mid",
 		"file"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:hbo-curt/midi-file-io.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
 	"author": "hbo-curt",
 	"license": "see license",
 	"readmeFilename": "README.md"
