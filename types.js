@@ -5,14 +5,14 @@
  */
 
 /**
- * @typedef {Object} MidiHeader
+ * @typedef {Object} MidiIoHeader
  * @property {Number} formatType
  * @property {Number} trackCount
  * @property {Number} ticksPerBeat
  */
 
 /**
- * @typedef {Object} MidiEvent
+ * @typedef {Object} MidiIoEvent
  * @property {Number|undefined} amount
  * @property {Number|undefined} channel
  * @property {Number|undefined} controllerType
@@ -40,11 +40,11 @@
  */
 
 /**
- * @typedef {Array<MidiEvent>} MidiTrack
+ * @typedef {Array<MidiIoEvent>} MidiIoTrack
  */
 
 /**
- * @typedef {Object} MidiFile
- * @property {MidiHeader} header
- * @property {Array<MidiTrack>} tracks
+ * @typedef {Object} MidiIoSong
+ * @property {MidiIoHeader} header
+ * @property {Array<MidiIoTrack>} tracks
  */
