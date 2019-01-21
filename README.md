@@ -1,33 +1,46 @@
 # midi-file-parser
 ```
-npm install midi-file-parser
+npm install https://github.com/hbo-curt/midi-file-io
 ```
-The midi file parsing parts of [jasmid](https://github.com/gasman/jasmid)
+Forked from [midi-file-parser](https://github.com/NHQ/midi-file-parser). Special thanks to the authors.
 
-Special thanks to the authors.
+Added write functionality with small revisions to the read functionity. Probably not as portable as it was. File IO has dependencies on NodeJS's `fs`. Feel free to fork it and pull it out if this gets in your way.
+
 
 ## usage
-Its just a function that takes a binary string.
+Functionality is broken up into read and write. Each of these are broken up into a file operation and a buffer operation:
+- `parseMidiBuffer` - parses the binary MIDI buffer into a [MidiFile](./types.js)
+- `parseMidiFile` - parses the MIDI file at the specified path into a [MidiFile](./types.js)
+- `writeMidiToBuffer` - writes the specified [MidiFile](./types.js) object to a returned  `Buffer`.
+- `writeMidiToFile` -  writes the specified [MidiFile](./types.js) object to the specified path.
+
+## parseMidiBuffer
 ```js
-var midiFileParser = require('midi-file-parser');
+const midiFileIO = require('midi-file-parser');
 
-var file = require('fs').readFileSync('rachnananov.mid', 'binary')
-
-var midi = midiFileParser(file);
+const buffer = require('fs').readFileSync('rachnananov.mid', 'binary')
+const parsed = parseMidiBuffer(buffer);
 ```
 
-It returns an object with header and track info.
-
-
-You can use it with [browserify](https://github.com/substack/browserify) and [brfs](https://github.com/substack/brfs):
+## parseMidiFile
 ```js
-var midiFileParser = require('midi-file-parser');
+const midiFileIO = require('midi-file-parser');
 
-var fs = require('fs')
+const parsed = parseMidiFile('rachnananov.mid');
+```
 
-var file = fs.readFileSync('rachnananov.mid', 'base46')
+## writeMidiToBuffer
+```js
+const midiFileIO = require('midi-file-parser');
 
-file = window.atob(file)
+const parsed = parseMidiFile('rachnananov.mid');
+const buffer = writeMidiToBuffer(parsed);
+```
 
-var midi = midiFileParser(file);
+## writeMidiToFile
+```js
+const midiFileIO = require('midi-file-parser');
+
+const parsed = parseMidiFile('rachnananov.mid');
+const buffer = writeMidiToFile(parsed, 'rachnananov-copy.mid');
 ```
