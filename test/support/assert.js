@@ -19,6 +19,23 @@ exports.strictEqual=assert.strictEqual;
 exports.throws=assert.throw;
 
 /**
+ * Formats value with options
+ * @param {*} value
+ * @param {Number} minWidth
+ */
+exports.format=function(value, minWidth=0) {
+	if(value==null) {
+		value=String(value);
+	} else {
+		value=value.toString();
+	}
+	while(value.length<minWidth) {
+		value=` ${value}`;
+	}
+	return value;
+};
+
+/**
  * We print out the expected as, in here at least, we frequently want to steal it.
  * @param {*} actual
  * @param {*} expected

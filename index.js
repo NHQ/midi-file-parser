@@ -9,5 +9,7 @@ const writer=require("./lib/writer");
 
 module.exports={
 	parseMidiBuffer: reader.parseMidiBuffer,
-	parseMidiFile: reader.parseMidiFile
+	parseMidiFile: reader.parseMidiFile,
+	writeMidiToBuffer: writer.writeMidiToBuffer,
+	writeMidiToFile: writer.writeMidiToFile
 };

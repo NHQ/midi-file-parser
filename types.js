@@ -13,19 +13,28 @@
 
 /**
  * @typedef {Object} MidiEvent
+ * @property {Number|undefined} amount
  * @property {Number|undefined} channel
+ * @property {Number|undefined} controllerType
  * @property {string|undefined} data
  * @property {Number} deltaTime
  * @property {Number|undefined} denominator
+ * @property {Number|undefined} hour
+ * @property {Number|undefined} frame
  * @property {Number|undefined} key
+ * @property {Number|undefined} metronome
+ * @property {Number|undefined} microsecondsPerBeat
+ * @property {Number|undefined} min
  * @property {Number|undefined} noteNumber
  * @property {Number|undefined} numerator
  * @property {Number|undefined} programNumber
- * @property {Number} scale
- * @property {"controller"|"endOfTrack"|"instrumentName"|"keySignature"|"marker"|"noteOff"|"noteOn"|"programChange"|"setTempo"|"timeSignature"|"trackName"|"unknown"}
- *     subtype
+ * @property {Number|undefined} scale
+ * @property {Number|undefined} sec
+ * @property {Number|undefined} subframe
+ * @property {"controller"|"endOfTrack"|"instrumentName"|"keySignature"|"marker"|"noteOff"|"noteOn"|"programChange"|"setTempo"|"timeSignature"|"trackName"|"unknown"} subtype
  * @property {string|undefined} text
- * @property {"channel"|"meta"} type
+ * @property {Number|undefined} thirtyseconds
+ * @property {"channel"|"meta"|"sysEx"|"dividedSysEx"} type
  * @property {Number|undefined} value
  * @property {Number|undefined} velocity
  */
