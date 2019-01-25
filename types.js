@@ -5,38 +5,47 @@
  */
 
 /**
+ * @typedef {"channel"|"meta"|"sysEx"|"dividedSysEx"} MidiIoEventType
+ */
+
+/**
+ * @typedef {"controller"|"endOfTrack"|"instrumentName"|"keySignature"|"marker"|"noteOff"|"noteOn"|"programChange"|"setTempo"|"timeSignature"|"trackName"|"unknown"} MidiIoEventSubtype
+ */
+
+
+/**
  * @typedef {Object} MidiIoHeader
- * @property {Number} formatType
- * @property {Number} trackCount
- * @property {Number} ticksPerBeat
+ * @property {number} formatType
+ * @property {number} trackCount
+ * @property {number} ticksPerBeat
  */
 
 /**
  * @typedef {Object} MidiIoEvent
- * @property {Number|undefined} amount
- * @property {Number|undefined} channel
- * @property {Number|undefined} controllerType
+ * @property {number|undefined} amount
+ * @property {number|undefined} channel
+ * @property {number|undefined} controllerType
  * @property {string|undefined} data
- * @property {Number} deltaTime
- * @property {Number|undefined} denominator
- * @property {Number|undefined} hour
- * @property {Number|undefined} frame
- * @property {Number|undefined} key
- * @property {Number|undefined} metronome
- * @property {Number|undefined} microsecondsPerBeat
- * @property {Number|undefined} min
- * @property {Number|undefined} noteNumber
- * @property {Number|undefined} numerator
- * @property {Number|undefined} programNumber
- * @property {Number|undefined} scale
- * @property {Number|undefined} sec
- * @property {Number|undefined} subframe
- * @property {"controller"|"endOfTrack"|"instrumentName"|"keySignature"|"marker"|"noteOff"|"noteOn"|"programChange"|"setTempo"|"timeSignature"|"trackName"|"unknown"} subtype
+ * @property {number} deltaTime
+ * @property {number|undefined} denominator
+ * @property {number|undefined} hour
+ * @property {number|undefined} frame
+ * @property {number|undefined} key
+ * @property {number|undefined} metronome
+ * @property {number|undefined} microsecondsPerBeat
+ * @property {number|undefined} min
+ * @property {number|undefined} noteNumber
+ * @property {number|undefined} numerator
+ * @property {number|undefined} programNumber
+ * @property {number|undefined} scale
+ * @property {number|undefined} sec
+ * @property {number|undefined} subframe
+ * @property {MidiIoEventSubtype} subtype
  * @property {string|undefined} text
- * @property {Number|undefined} thirtyseconds
- * @property {"channel"|"meta"|"sysEx"|"dividedSysEx"} type
- * @property {Number|undefined} value
- * @property {Number|undefined} velocity
+ * @property {number|undefined} thirtyseconds
+ * @property {MidiIoEventType} type
+ * @property {number|undefined} value
+ * @property {number|undefined} velocity
  */
 
 /**

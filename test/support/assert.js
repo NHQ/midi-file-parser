@@ -21,7 +21,7 @@ exports.throws=assert.throw;
 /**
  * Formats value with options
  * @param {*} value
- * @param {Number} minWidth
+ * @param {number} minWidth
  */
 exports.format=function(value, minWidth=0) {
 	if(value==null) {
