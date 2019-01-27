@@ -14,7 +14,7 @@ describe("lib.reader", function() {
 			assert.deepEqual(parsed.header, {
 				"formatType": 1,
 				"trackCount": 3,
-				"ticksPerBeat": 480
+				"ticksPerQuarter": 480
 			});
 			assert.strictEqual(parsed.tracks[1].filter(event=>event.subtype==="noteOn").length, 4);
 			assert.strictEqual(parsed.tracks[2].filter(event=>event.subtype==="noteOn").length, 4);

@@ -18,7 +18,7 @@
  * @typedef {Object} MidiIoHeader
  * @property {number} formatType
  * @property {number} trackCount
- * @property {number} ticksPerBeat
+ * @property {number} ticksPerQuarter
  */
 
 /**
@@ -58,9 +58,3 @@
  * @property {MidiIoHeader} header
  * @property {Array<MidiIoTrack>} tracks
  */
-
-/**
- * @type {MidiIoEventSubtype}
- */
-var x;
-x=
