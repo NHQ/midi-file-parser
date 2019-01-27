@@ -1,6 +1,6 @@
 {
 	"name": "midi-file-io",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "npm port of NHQ's midi-file-reader. support both read and write",
 	"main": "index.js",
 	"devDependencies": {

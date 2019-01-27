@@ -5,13 +5,14 @@
  */
 
 /**
- * @typedef {"channel"|"meta"|"sysEx"|"dividedSysEx"} MidiIoEventType
+ * @typedef {("channel"|"meta"|"sysEx"|"dividedSysEx")} MidiIoEventType
  */
 
 /**
- * @typedef {"controller"|"endOfTrack"|"instrumentName"|"keySignature"|"marker"|"noteOff"|"noteOn"|"programChange"|"setTempo"|"timeSignature"|"trackName"|"unknown"} MidiIoEventSubtype
+ * @typedef {("channelAftertouch"|"controller"|"copyrightNotice"|"cuePoint"|"endOfTrack"|"instrumentName"|"keySignature"
+ * 	|"lyrics"|"marker"|"midiChannelPrefix"|"noteAftertouch"|"noteOff"|"noteOn"|"pitchBend"|"programChange"|"setTempo"
+ * 	|"sequenceNumber"|"sequencerSpecific"| "smpteOffset"|"timeSignature"|"trackName"|"text"|"unknown")} MidiIoEventSubtype
  */
-
 
 /**
  * @typedef {Object} MidiIoHeader
@@ -57,3 +58,9 @@
  * @property {MidiIoHeader} header
  * @property {Array<MidiIoTrack>} tracks
  */
+
+/**
+ * @type {MidiIoEventSubtype}
+ */
+var x;
+x=
