@@ -1,6 +1,6 @@
 # midi-file-parser
 ```
-npm install https://github.com/hbo-curt/midi-file-io
+npm install https://github.com/celsasser/midi-file-io
 ```
 Forked from [midi-file-parser](https://github.com/NHQ/midi-file-parser). Special thanks to the authors.
 

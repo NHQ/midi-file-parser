@@ -1,27 +1,27 @@
 {
-	"name": "midi-file-io",
-	"version": "1.0.3",
-	"description": "npm port of NHQ's midi-file-reader. support both read and write",
-	"main": "index.js",
-	"devDependencies": {
-		"mocha": "5.2.0"
-	},
-	"keywords": [
-		"files",
-		".mid",
-		"file",
-		"midi",
-		"read",
-		"write"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:hbo-curt/midi-file-io.git"
-	},
-	"scripts": {
-		"test": "mocha --recursive ./test/unit"
-	},
-	"author": "hbo-curt",
-	"license": "see license",
-	"readmeFilename": "README.md"
+    "author": "Curt Elsasser",
+    "description": "Reads, parses and writes MIDI files. Fork of NHQ's midi-file-parser.",
+    "license": "see license",
+    "main": "index.js",
+    "name": "midi-file-io",
+    "readmeFilename": "README.md",
+    "version": "1.0.6",
+    "devDependencies": {
+        "mocha": "5.2.0"
+    },
+    "keywords": [
+        "midi",
+        ".mid",
+        "parse",
+        "read",
+        "write",
+        "file"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/celsasser/midi-file-io"
+    },
+    "scripts": {
+        "test": "mocha --recursive ./test/unit"
+    }
 }
