@@ -5,9 +5,9 @@
     "main": "index.js",
     "name": "midi-file-io",
     "readmeFilename": "README.md",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "devDependencies": {
-        "mocha": "5.2.0"
+        "mocha": "6.1.4"
     },
     "keywords": [
         "midi",
