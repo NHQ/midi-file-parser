@@ -11,13 +11,14 @@ const {
 	parseMidiFile,
 	writeMidiToBuffer,
 	writeMidiToFile
-}=require("../../index");
+}=require("../../dist");
 
 /**
  * @param {string} read
  * @param {Buffer} write
  */
 function compareBuffers(read, write) {
+	/* eslint-disable no-console */
 	try {
 		assert.strictEqual(write.toString("binary"), read.toString());
 	} catch(error) {

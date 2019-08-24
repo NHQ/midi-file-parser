@@ -1,0 +1,7 @@
+# files
+tsconfig.json
+
+# directories
+.idea/
+src/
+test/

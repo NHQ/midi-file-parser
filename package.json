@@ -2,12 +2,15 @@
     "author": "Curt Elsasser",
     "description": "Reads, parses and writes MIDI files. Fork of NHQ's midi-file-parser.",
     "license": "see license",
-    "main": "index.js",
+    "main": "dist/index",
     "name": "midi-file-io",
     "readmeFilename": "README.md",
-    "version": "1.0.7",
+    "version": "2.0.0",
     "devDependencies": {
-        "mocha": "6.1.4"
+        "@types/lodash": "4.14.137",
+        "@types/node": "12.7.2",
+        "mocha": "6.2.0",
+        "typescript": "3.5.3"
     },
     "keywords": [
         "midi",
@@ -22,6 +25,10 @@
         "url": "https://github.com/celsasser/midi-file-io"
     },
     "scripts": {
-        "test": "mocha --recursive ./test/unit"
-    }
+        "build": "tsc -d",
+        "deploy": "npm run test && npm publish",
+        "test": "npm run build && npm run test:unit",
+        "test:unit": "mocha --recursive ./test/unit"
+    },
+    "types": "dist/index"
 }

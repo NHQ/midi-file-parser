@@ -9,10 +9,10 @@ Added write functionality, tests and made small additions/revisions to the read 
 
 ## usage
 Functionality is broken up into read and write. Each of these are broken up into a file operation and a buffer operation:
-- `parseMidiBuffer` - parses the binary MIDI buffer into a [MidiIoSong](./types.js)
-- `parseMidiFile` - parses the MIDI file at the specified path into a [MidiIoSong](./types.js)
-- `writeMidiToBuffer` - writes the specified [MidiIoSong](./types.js) object to a returned  `Buffer`.
-- `writeMidiToFile` -  writes the specified [MidiIoSong](./types.js) object to the specified path.
+- `parseMidiBuffer` - parses the binary MIDI buffer into a [MidiIoSong](src/types.js)
+- `parseMidiFile` - parses the MIDI file at the specified path into a [MidiIoSong](src/types.js)
+- `writeMidiToBuffer` - writes the specified [MidiIoSong](src/types.js) object to a returned  `Buffer`.
+- `writeMidiToFile` -  writes the specified [MidiIoSong](src/types.js) object to the specified path.
 
 ## parseMidiBuffer
 ```js
