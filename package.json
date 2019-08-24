@@ -26,7 +26,8 @@
     },
     "scripts": {
         "build": "tsc -d",
-        "deploy": "npm run test && npm publish",
+        "deploy": "npm run rebuild && npm run test && npm publish",
+        "rebuild": "rm -rf dist && npm run build",
         "test": "npm run build && npm run test:unit",
         "test:unit": "mocha --recursive ./test/unit"
     },
