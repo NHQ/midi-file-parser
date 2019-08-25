@@ -4,6 +4,21 @@
  * Time: 1:48 AM
  */
 
+export enum MidiFileType {
+	/**
+	 * contains a single track
+	 */
+	SINGLE = 0,
+	/**
+	 * contains one or more simultaneous (as in played simultaneously) tracks
+	 */
+	SIMULTANEOUS = 1,
+	/**
+	 * contains one or more independent (as in played independently) tracks
+	 */
+	INDEPENDENT =2
+}
+
 export enum MidiIoEventType {
 	channel = "channel",
 	meta = "meta",
@@ -38,7 +53,7 @@ export enum MidiIoEventSubtype {
 }
 
 export interface MidiIoHeader {
-	formatType: number,
+	formatType: MidiFileType,
 	trackCount: number,
 	ticksPerQuarter: number
 }

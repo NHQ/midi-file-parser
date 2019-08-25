@@ -5,7 +5,7 @@
     "main": "dist/index",
     "name": "midi-file-io",
     "readmeFilename": "README.md",
-    "version": "2.0.0",
+    "version": "2.1.2",
     "devDependencies": {
         "@types/lodash": "4.14.137",
         "@types/node": "12.7.2",

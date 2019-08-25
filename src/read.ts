@@ -86,7 +86,7 @@ export function parseMidiBuffer(data: string): MidiIoSong {
 						event.channel = stream.readInt8();
 						return event;
 					case 0x2f:
-						event.subtype  = MidiIoEventSubtype.endOfTrack;
+						event.subtype = MidiIoEventSubtype.endOfTrack;
 						if(length != 0) {
 							throw new Error(`expected length for endOfTrack event is 0 but found ${length}`);
 						}
@@ -235,7 +235,7 @@ export function parseMidiBuffer(data: string): MidiIoSong {
 		if(trackChunk.id != "MTrk") {
 			throw new Error(`unexpected chunk: expected MTrk but found "${trackChunk.id}"`);
 		}
-		const track = [],
+		const track: MidiIoEvent[] = [],
 			trackStream = new ReadStream(trackChunk.data);
 		while(!trackStream.eof()) {
 			track.push(readEvent(trackStream));
@@ -245,7 +245,7 @@ export function parseMidiBuffer(data: string): MidiIoSong {
 
 	const stream = new ReadStream(data),
 		header = readHeader(stream),
-		tracks = [];
+		tracks: MidiIoTrack[] = [];
 	for(let i = 0; i < header.trackCount; i++) {
 		tracks.push(readTrack(stream));
 	}
